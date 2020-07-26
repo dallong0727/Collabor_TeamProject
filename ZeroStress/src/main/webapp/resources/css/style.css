@@ -1,0 +1,158 @@
+  /* 디자인시작하기전에 웹폰트와 초기화 선언 */
+  @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+  /* 전체 적용 */
+  * {padding: 0; margin: 0; box-sizing: border-box;}
+  body, html {width: 100%; min-width: 320px; font-family: 'Noto Sans KR', sans-serif; /*웹폰트 사용*/}
+  img {max-width: 100%; /*사이즈가 변해도 넓이를 유지 */ height: auto; /*사이즈가 변해도 높이를 유지 */ /*vertical-align: top;*/}
+  input, textarea, button, select {-webkit-appearance: none; -moz-appearance: none; appearance: none;border: none} /*고유하게 적용되어있는 form관련 요소들을 제거해서 여러브라우저에서 동일한디자인을 얻게함*/
+  ul, ol, dl, li {list-style: none /*순서 요소들이 리스트스타일을 업앤다 */}
+  .btn {border-radius: 0px;}
+
+    /* header */
+      header {position: fixed; top:0; left:0; z-index: 15; width: 100%; border-radius: 0px; background-color: white;}
+      header h1 {text-align: center; margin: 20px; color: #555555;}
+      .header-span {color : #555555}
+      .logo-box {position: relative;}
+      .logo-box .login-register {position: absolute; top: -60px; right: 50px; margin: 15px;}
+      .logo-box .login-register p {margin: 15px; color: #555555; display: inline;}
+      header .navbox {display: block; margin: 0px; padding: 0px; text-align: center;}
+      header .navbar-inverse {background-image: none; background-color: white; border-color: white; z-index: -5;}
+      header .navbox .dropdownbtn {display: inline-block; color: #555; padding: 14px 20px; margin: 0px 10px; transition: border 0.4s;}
+      header .navbox .dropdownbtn:hover {border-bottom: 2px solid #555;}
+      header .navbox p:hover{text-decoration: none;}
+      header .navbox .dropdown-menu {background-color: white; color: #555555;}
+      .navbar{margin-bottom: 0; border:none;}
+
+
+
+    /* main */
+      .background-img{width:100%; height: 100%; position: relative; margin-bottom: 20px;}
+      .background-img video{width:100%; height: 100%;}
+
+      .bg-box{position: absolute; top:0; left:0; width:100%; height:100%; background-color: black; opacity: 0.2; z-index:1; margin:0; padding:0;}
+
+      .sptitle {margin : 50px auto; text-align: center; border-bottom: 1px solid #555; padding : 50px 0px; color: #555555;}
+      .sptitle2 {margin : 50px auto; text-align: center; color: #555555;}
+      .recommend .clearfix  {border: 1px solid #555555; padding: 10px 0px;}
+      .recommend .clearfix img {width: 20%; height: 20%;}     
+     
+      .main {position: relative; text-align: center;}
+      .main .main_text {position: absolute; top:300px; right: 300px; color: white;}
+      .main .main_text h2 {font-size: 40px; background: rgba(0,0,0,0.3); padding: 10px; margin-bottom: 5px;}
+      .main .main_text p {font-size: 15px; background: rgba(0,0,0,0.3); padding: 10px; margin-bottom: 5px;}
+      .main .main-image{width: 80%;}
+      
+      .recommend {margin-bottom: 20px;}
+
+      .contents {margin-bottom: 20px;}
+
+      .contents-image .product {width: 100%;}
+      .contents-image .clearfix {text-align: center; border: 1px solid #555555;}
+
+      .contents-image .clearfix h2 {font-size: 20px; color: #555;}
+      .contents-image .clearfix h3 {font-size: 15px; color: #555; display: inline;}
+      
+      .dropdown {position: relative; display: inline-block;}
+      .dropdown-content {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+      .dropdown:hover .dropdown-content {display: block;}
+      .desc {padding: 15px; text-align: center;}
+      .aside-inner {position: relative;}
+      
+      .quick_area {position: fixed; top: 250px; right: 0; z-index: 5;}
+      .quick-list li {background-color: black; padding: 20px; border: 1px solid white; text-align: center;}
+      .quick-list li h4 {color: white;}
+      .quick-list li a {text-decoration: none; color: white; font-size: medium; letter-spacing: -2px; }
+      .quick-list li:hover {background-color: #777;}
+
+      footer {margin-top: 70px; background-color: #ff52a0; padding: 30px 0;}
+      footer .copyright {font-size: 13px; line-height: 20px; color: #f1f1f1;}
+      footer .copyright address {margin-bottom: 0;}
+      footer .footer-menu li {display: inline-block; padding: 0 10px;}
+      footer .footer-menu li a {display: block; color: #f1f1f1; font-size: 13px;}
+
+      @media (max-width: 767px) {
+          header h1 {margin: 10px; font-size: 20px;}
+          header .navbox {text-align: left;}
+          header .navbox li {display: block; padding: 5px 0px;}
+          .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {background-color: unset;}
+          .quick_area{display: none;}
+          .main {position: relative; margin-bottom: 50px; text-align: center;}
+          .main .main_text {display: none;}
+          .logo-box {position: relative;}
+          .logo-box .login-register {position: absolute; top: -45px; right: 10px; cursor: pointer;}
+          .logo-box .login-register a {margin: 5px; color: #777; font-size: 10px;}
+      }
+
+  /* user-modal */
+      .modal-title {text-align: center;}
+      .modal-span {color : #ff52a0};
+      .modal-form {margin-bottom: 0;}
+      .project-login-table {padding: 0; margin: 0 auto; width: 100%}
+      .project-login-table-td {text-align: left}
+      .project-login-table-td2 {padding-top: 10px; text-align: center}
+      .project-login-table-td3 {width: 100%; text-align: center;}
+      .project-login-table-td4 {width: 33%; text-align: center; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ececec}
+      .project-login-table-input {ime-mode: inactive; margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de;}
+      .project-login-table-button1 {background-color: #ff52a0; width: 100%; margin-top: 0; margin-bottom: 10px; height: 40px; color: white; border: 0px solid #f78f24; opacity: 0.8; border-radius: 5px;}
+      .project-login-table-button2 {background-color: orange; width: 100%;  margin-top: 0; margin-bottom: 10px; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8; border-radius: 5px;}
+      .project-regist-table {padding: 0; margin: 0 auto; width: 100%}
+      .project-regist-table-td {text-align: left}
+      .project-regist-table-td2 {padding-top: 10px; text-align: center}
+      .project-regist-table-td3 {width: 100%; text-align: center;}
+      .project-regist-table-input {ime-mode: inactive; margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de;}
+      .project-regist-table-button1 {background-color: #ff52a0; width: 100%; margin-top: 0; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8; border-radius: 5px;}
+
+    
+   /* board-modal */
+   .project-board-table {padding: 0; margin: 0 auto; width: 100%}
+   .project-board-table-td {text-align: left}
+   .project-board-table-td2 {padding-top: 10px; text-align: center}
+   .project-board-table-td3 {width: 100%; text-align: center;}
+   .project-board-table-td4 {width: 33%; text-align: center; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ececec}
+   .project-board-table-textarea {margin-bottom: 10px; resize: vertical}
+   .project-board-table-input {ime-mode: inactive; margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de;}
+   .project-board-table-button1 {background-color: #ff52a0; width: 100%; margin-top: 0; margin-bottom: 10px; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8; border-radius: 5px;}
+   .project-board-table-button2 {background-color: orange; width: 100%;  margin-top: 0; margin-bottom: 10px; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8; border-radius: 5px;}
+   .project-board-table-button3 {background-color: red; width: 100%;  margin-top: 0; margin-bottom: 10px; height: 40px; color: white; border: 0px solid #388E3C; opacity: 0.8; border-radius: 5px;}
+
+   /* footer */
+   footer {margin-top: 70px; background-color: #303740; padding: 30px 0;}
+   footer .copyright {font-size: 13px; line-height: 20px; color: #f1f1f1;}
+   footer .copyright address {margin-bottom: 0;}
+   footer .footer-menu li {display: inline-block; padding: 0 10px;}
+   footer .footer-menu li a {display: block; color: #f1f1f1; font-size: 13px;}
+
+
+   /*날씨CSS*/
+   .img_box{
+    padding-top: 5%;
+}
+.location{
+    padding-top:40px;
+    font-size:15px;
+}
+
+.tit_weather{
+    color:#777;
+    border-bottom:3px solid  #B2CC99;
+    padding:15px;
+    margin-top:30px;
+}
+
+.weather_table{
+    margin-top:30px;
+    margin-bottom:100px;
+    width:100%;
+    text-align: center;
+   
+   
+}
+.weather_table th,td{
+   line-height: 50px;
+   text-align: center;
+   border:1px solid #D8D8D8;
+}
+
+
+
+   /*날씨CSS마지막*/
